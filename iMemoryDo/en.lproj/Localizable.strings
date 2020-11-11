@@ -7,13 +7,13 @@
 */
 "Welcome" = "Welcome";
 
-"t1" = "You forget 90%";
+"t1" = "You will forget 90% of what you learned today";
 "d1" = "Everything you learned today, you will have a 90% chance of forgetting it";
 
-"t2" = "You forget 70%";
+"t2" = "You may forget 70%";
 "d2" = "If you review what you learned 24 hours later, you have a 70% chance of forgetting it.";
 
-"t3" = "Sometimes you forget 50%";
+"t3" = "Sometimes you'll only forget 50%";
 "d3" = "But if you go back to review what you learned 1 week later, you have only a 50% chance of forgetting it.";
 
 "t4" = "You forget only 10%";

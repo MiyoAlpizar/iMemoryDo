@@ -7,13 +7,13 @@
 */
 "Welcome" = "Bienvenido";
 
-"t1" = "Olvidas el 90% de lo que aprendes";
+"t1" = "Olvidarás el 90% de lo que aprendiste hoy";
 "d1" = "Todo lo que aprendiste hoy, tendrás un 90% de probabilidades de olvidarlo.";
 
-"t2" = "Olvidarás el 70%";
+"t2" = "Es posible que olvides el 70%";
 "d2" = "Si tú revisas lo que aprendiste hoy, 24 horas después, tendrás 70% de probablidades de olvidarlo.";
 
-"t3" = "A veces olvidas sólo el 50%";
+"t3" = "A veces solo olvidarás el 50%";
 "d3" = "Pero si vuleves a revisar lo que aprendiste 1 semana después, tendrás sólo el 50% de probabilidades de olvidarlo.";
 
 "t4" = "Olvida sólo el 10%";

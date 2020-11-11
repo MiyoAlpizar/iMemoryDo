@@ -29,6 +29,7 @@ extension WelcomeCard {
             
             WelcomeCard(id: 3, title: "t4".asLocalized(), description: "d4".asLocalized(), img: "Brain4", show: false, color: Color.Accent4),
             
+            WelcomeCard(id: 4, title: "t5".asLocalized(), description: "d5".asLocalized(), img: "Brain5", show: false, color: Color.Accent5),
            
             
         ]

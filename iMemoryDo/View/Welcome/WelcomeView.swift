@@ -13,11 +13,14 @@ struct WelcomeView: View {
     @State var count: Int = 0
     @State var width = UIScreen.main.bounds.width
     @State var page = 0
+    @State var bgColor = Color.Accent
     
     var body: some View {
         ZStack {
             GeometryReader { geo in
-                CarouselView(width: width, height: geo.frame(in: .global).height, page: $page, items: items.count)
+                CarouselView(width: width, height: geo.frame(in: .global).height, page: $page, items: items.count) { page in
+                    bgColor = items[page].color
+                }
             }.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             ZStack() {
                 VStack {
@@ -25,7 +28,7 @@ struct WelcomeView: View {
                     PageControlView(items: WelcomeCard.GetCards().count, page: $page)
                 }
             }
-        }
+        }.background(bgColor.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/))
     }
 }
 

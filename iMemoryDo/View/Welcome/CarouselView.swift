@@ -10,6 +10,7 @@ import SwiftUI
 
 
 struct CarouselView: UIViewRepresentable {
+    
     func makeCoordinator() -> Coordinator {
         return CarouselView.Coordinator(parent: self)
     }
@@ -19,7 +20,7 @@ struct CarouselView: UIViewRepresentable {
     var height: CGFloat
     @Binding var page: Int
     var items: Int
-    
+    var action: (_ page: Int) -> Void
     
     func makeUIView(context: Context) -> UIScrollView {
         let total = width * CGFloat(items)
@@ -47,10 +48,16 @@ struct CarouselView: UIViewRepresentable {
             self.parent = parent
         }
         
+        func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+            let page = Int(scrollView.contentOffset.x / UIScreen.main.bounds.width)
+            parent.action(page)
+        }
+        
         func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
             let page = Int(scrollView.contentOffset.x / UIScreen.main.bounds.width)
              print(page)
             self.parent.page = page
+            parent.action(page)
         }
     }
 }
